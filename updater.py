@@ -57,11 +57,10 @@ mycursor = db.cursor()
 
 
 #mycursor.execute("CREATE TABLE date_price (date VARCHAR(20) PRIMARY KEY, price float)")
-
+#qlquery = "SELECT * FROM date_price"
 sqlformula = "INSERT INTO date_price (date, price) VALUES (%s, %s)"
-
-
-
+#mycursor.execute(sqlquery)
+#print(mycursor.text)
 mycursor.execute(sqlformula,to_enter)
 
 
