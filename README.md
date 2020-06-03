@@ -17,5 +17,13 @@ use mysql;
 [mysql] update user set plugin='mysql_native_password' where User='root';
 [mysql] flush privileges;
 
-To update the database navigate to the project directory and run the ./updater_database.sh script. This can easily be turned into a cronjob to updte automatically, instructions for that coming soon. 
+To update the database navigate to the project directory and run the ./updater_database.sh script. This can easily be turned into a cronjob to update automatically. To create a cronjob to automatically update database type the following:
+
+crontab -e
+
+Select your preferred text editor then navigate to the bottom of the file and add a cronjob to the first line that isn't commented out. Your cronjob should look like:
+2 0 * * * /path/to/projectfolder/updater_database.sh
+
+This particular job will update your database at 12:02 every morning, however you can set it for anytime you like. Learn more about setting up cronjobs here https://www.youtube.com/watch?v=QZJ1drMQz1A
+
 
